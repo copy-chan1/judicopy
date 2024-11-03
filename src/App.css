@@ -1,0 +1,97 @@
+/* App.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background color */
+  color: #333; /* Default text color */
+}
+
+.homepage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white; /* Card background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Hero Section */
+.hero {
+  background-color: #ff8c00; /* Orange background */
+  color: white; /* White text color */
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 20px; /* Space below the hero section */
+}
+
+.hero h2 {
+  margin: 0;
+}
+
+.hero-button {
+  padding: 10px 20px;
+  background-color: #1e90ff; /* Blue color for button */
+  color: white; /* White text color for button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Larger font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.hero-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly grow the button */
+}
+
+/* Sections */
+h1 {
+  text-align: center;
+  color: #ff8c00; /* Orange color for the main heading */
+}
+
+h2 {
+  color: #1e90ff; /* Blue color for subheadings */
+  margin-top: 20px; /* Space above subheadings */
+}
+
+section {
+  margin-bottom: 20px; /* Space below sections */
+}
+
+ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+}
+
+ul li {
+  background: #1e90ff; /* Blue background for services */
+  color: white; /* White text color */
+  margin: 5px 0; /* Space between items */
+  padding: 10px; /* Padding for items */
+  border-radius: 5px; /* Rounded corners for items */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center vertically */
+}
+
+/* Contact Section */
+.contact h3 {
+  margin-top: 10px; /* Space above subheadings */
+}
+
+.contact p {
+  margin: 5px 0; /* Space between paragraphs */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .homepage {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .hero-button {
+    font-size: 16px; /* Smaller font size for buttons on smaller screens */
+  }
+}
