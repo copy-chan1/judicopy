@@ -7,58 +7,82 @@ body {
   color: #333; /* Default text color */
 }
 
+/* Main Container */
 .homepage {
-  max-width: 800px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 20px;
-  background-color: white; /* Card background color */
+  background-color: #ffffff; /* White card background */
   border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Hero Section */
 .hero {
-  background-color: #ff8c00; /* Orange background */
+  background-color: #ff8c00; /* Vibrant orange background */
   color: white; /* White text color */
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
   border-radius: 8px; /* Rounded corners */
-  margin-bottom: 20px; /* Space below the hero section */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for focus */
 }
 
 .hero h2 {
   margin: 0;
+  font-size: 28px;
 }
 
+/* Hero Button with Animation */
 .hero-button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #1e90ff; /* Blue color for button */
   color: white; /* White text color for button */
   border: none; /* No border */
   border-radius: 5px; /* Rounded corners */
-  font-size: 18px; /* Larger font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover */
+  animation: button-bounce 2s infinite; /* Bouncing animation */
 }
 
+/* Hover Animation */
 .hero-button:hover {
   background-color: #0056b3; /* Darker blue on hover */
-  transform: scale(1.05); /* Slightly grow the button */
+  transform: translateY(-3px) scale(1.05); /* Lift and enlarge slightly */
 }
 
-/* Sections */
+/* Pressed State */
+.hero-button:active {
+  transform: translateY(1px) scale(0.98); /* Slightly shrink when pressed */
+  background-color: #004080; /* Even darker blue for pressed state */
+}
+
+/* Button Bouncing Animation */
+@keyframes button-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px); /* Slight bounce up */
+  }
+}
+
+/* Main Headings and Sections */
 h1 {
   text-align: center;
-  color: #ff8c00; /* Orange color for the main heading */
+  color: #ff8c00; /* Orange for main heading */
+  font-size: 36px;
 }
 
 h2 {
-  color: #1e90ff; /* Blue color for subheadings */
-  margin-top: 20px; /* Space above subheadings */
+  color: #1e90ff; /* Blue for subheadings */
+  font-size: 24px;
+  margin-top: 20px;
 }
 
 section {
-  margin-bottom: 20px; /* Space below sections */
+  margin-bottom: 30px; /* Increased spacing for readability */
 }
 
 ul {
@@ -67,31 +91,41 @@ ul {
 }
 
 ul li {
-  background: #1e90ff; /* Blue background for services */
-  color: white; /* White text color */
-  margin: 5px 0; /* Space between items */
-  padding: 10px; /* Padding for items */
-  border-radius: 5px; /* Rounded corners for items */
-  display: flex; /* Flexbox for alignment */
-  align-items: center; /* Center vertically */
+  background: #1e90ff; /* Blue background for items */
+  color: white;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Small shadow for depth */
 }
 
 /* Contact Section */
 .contact h3 {
-  margin-top: 10px; /* Space above subheadings */
+  color: #ff8c00; /* Orange for emphasis */
+  margin-top: 10px;
 }
 
 .contact p {
-  margin: 5px 0; /* Space between paragraphs */
+  margin: 5px 0;
 }
 
-/* Responsive design */
+/* Responsive Design */
 @media (max-width: 600px) {
   .homepage {
-    padding: 10px; /* Reduce padding on smaller screens */
+    padding: 15px;
   }
 
   .hero-button {
-    font-size: 16px; /* Smaller font size for buttons on smaller screens */
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
   }
 }
